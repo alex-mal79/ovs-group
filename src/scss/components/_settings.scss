@@ -1,0 +1,50 @@
+//=======================================================
+//      Основные настройки
+//=======================================================
+.page,
+.page__body {
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+.page {
+    font-family: var(--font-family, sans-serif);
+}
+
+.page__body {
+    min-width: 320px;
+    font-size: 16px;
+}
+
+.site-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.main{
+    flex: 1 1 auto;
+    width: 100%;
+}
+//=======================================================
+//      Ограничивающий контейнер
+//=======================================================
+.container {
+    max-width: var(--max-widthContainer);
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+}
+//=======================================================
+//      Сброс стилей кнопки
+//=======================================================
+.btn-reset {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+}
