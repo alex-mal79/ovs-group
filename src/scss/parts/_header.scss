@@ -1,0 +1,45 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    @include adaptive-value('padding-top', 25, 20, 1);
+    @include adaptive-value('padding-bottom', 25, 20, 1);
+    z-index: 15;
+    transition: top 0.8s ease 0s;
+    background-color: var(--color-ebony);
+    @media (min-width: $md3) {
+        &.scroll--active {
+            top: -100%;
+        }
+    }
+    // .header__container
+    &__container {
+        display: flex;
+        padding: 20px 0px;
+    }
+    // .header__logo
+    &__logo {
+    }
+    // .header__menu
+    &__menu {
+    }
+    // .header__contacts
+    &__contacts {
+    }
+    // .header__bureger
+    &__bureger {
+    }
+}
+.container {
+}
+.logo {
+
+}
+.menu {
+}
+.contacts {
+    // .contacts__header
+    &__header {
+    }
+}
