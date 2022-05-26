@@ -3,7 +3,6 @@
 //================================================================
 export const headerScroll = () => {
     const header = document.querySelector('[data-scroll]');
-    
     if(header){
         let lastScroll = 0;
         const defaultOffset = header.dataset.scroll;

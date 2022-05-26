@@ -14,15 +14,15 @@
                         </a>
                     </div>
                     <div class="header__menu menu">
-                        <nav class="menu__body" data-menu-body>
+                        <nav class="menu__body" data-menu-body data-drop-mainBlock>
                             <ul class="menu__list">
                                 <li class="menu__item">
                                     <a href="##" class="menu__link">
                                         <span class="menu__text">О компании</span>
                                     </a>
                                 </li>
-                                <li class="menu__item">
-                                    <button class="menu__button btn-reset">
+                                <li class="menu__item" data-drop-parent>
+                                    <button class="menu__button btn-reset" data-drop-btn>
                                         <span class="menu__text">Услуги</span>
                                         <span class="menu__arrow img">
                                             <picture>
@@ -77,8 +77,8 @@
                                         </ul>
                                     </div>
                                 </li>
-                                <li class="menu__item">
-                                    <button class="menu__button btn-reset">
+                                <li class="menu__item" data-drop-parent>
+                                    <button class="menu__button btn-reset" data-drop-btn>
                                         <span class="menu__text">Каталог</span>
                                         <span class="menu__arrow img">
                                             <picture>
@@ -121,7 +121,28 @@
                             </ul>
                         </nav>
                     </div>
-                    <div class="header__contacts contacts__header"></div>
+                    <div class="header__contacts contacts-header" data-da=".menu__body, 768, last">
+                        <a href="tel:+380713028604" class="contacts-header__link">
+                            <span class="contacts-header__icon-phone img">
+                                <picture>
+                                  <source srcset="@img/icons/icon-phone.avif" type="image/avif">
+                                  <source srcset="@img/icons/icon-phone.webp" type="image/webp">
+                                  <img loading="lazy" src="@img/icons/icon-phone.png" alt="Иконка телефона">
+                                </picture>
+                            </span>
+                            <span class="contacts-header__text">+38 (071) 302-86-04</span>
+                        </a>
+                        <a href="mailto:info@ovs-group.ru" class="contacts-header__link">
+                            <span class="contacts-header__icon-mail img">
+                                <picture>
+                                  <source srcset="@img/icons/icon-mail.avif" type="image/avif">
+                                  <source srcset="@img/icons/icon-mail.webp" type="image/webp">
+                                  <img loading="lazy" src="@img/icons/icon-mail.png" alt="Иконка телефона">
+                                </picture>
+                            </span>
+                            <span class="contacts-header__text">info@ovs-group.ru</span>
+                        </a>
+                    </div>
                     <div class="header__bureger">
                         <button type="button" class="icon-menu btn-reset" data-icon-menu>
                             <span></span>
