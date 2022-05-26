@@ -3,11 +3,10 @@
 //================================================================
 export const headerScroll = () => {
     const header = document.querySelector('[data-scroll]');
-    console.log(header);
-
+    
     if(header){
         let lastScroll = 0;
-        const defaultOffset = 150;
+        const defaultOffset = header.dataset.scroll;
         const scrollPosition = () => window.scrollY || document.documentElement.scrollTop;
         const containHide = () => header.classList.contains('scroll--active');
         window.addEventListener('scroll', () => {
