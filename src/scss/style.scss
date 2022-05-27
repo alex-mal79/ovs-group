@@ -4,10 +4,11 @@
 @import "components/vars";
 @import "components/mixins";
 @import "components/settings";
+@import "components/general";
 
 // подключения компонентов страницы
 @import "./parts/header";
 @import "./parts/footer";
 
 // подключения страниц
-
+@import "./pages/index/fullscreen";
