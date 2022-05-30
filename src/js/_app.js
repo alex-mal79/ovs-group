@@ -4,3 +4,8 @@
 import { dynamicAdaptiv } from "./app/dynamicAdapt.js";
 dynamicAdaptiv();
 // =================================================
+//Динамический спойлер
+// =================================================
+import { spoilers } from "./app/spoilers.js";
+spoilers();
+// =================================================

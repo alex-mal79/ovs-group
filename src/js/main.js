@@ -41,3 +41,21 @@ if(fullSlider){
         },
     });
 }
+// Слайдер "Производители"
+const brends = document.querySelector('.brend-index__swiper');
+if(brends){
+    const brend = new Swiper(brends,{
+        observer: true,
+        observerParents: true,
+        observerSlideChildren: true,
+        slidesPerView: 5,
+        spaceBetween: 20,
+        navigation: {
+            prevEl: '.controls-brends__button-prev',
+            nextEl: '.controls-brends__button-next',
+        },
+        pagination: {
+            el: '.brends-index__pagination',
+        },
+    });
+}

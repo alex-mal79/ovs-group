@@ -1,0 +1,86 @@
+.brends-index {
+    @include adaptive-value('padding-top', 100, 50, 1);
+    @include adaptive-value('padding-bottom', 100, 50, 1);
+    background-color: var(--color-white);
+    // .brends-index__container
+    &__container {
+        @media (min-width: $md1) {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                right: -70px;
+                height: 377px;
+                width: 50px;
+                background: url(../img/bg-dots.png) no-repeat;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    // .brends-index__title
+    &__title {
+        @include adaptive-value('margin-bottom', 50, 25, 1);
+        text-align: center;
+    }
+    // .brends-index__wrap
+    &__wrap {
+        display: flex;
+        align-items: center;
+    }
+    // .brend-index__swiper
+    &__swiper {
+        min-width: 0;
+    }
+    // .brends-index__controls
+    // &__controls {
+    // }
+    // .brends-index__pagination-wrap
+    &__pagination-wrap {
+        margin: 30px 0px 0px 0px;
+    }
+    // .brends-index__pagination
+    &__pagination {
+        text-align: center;
+        & .swiper-pagination-bullet-active{
+            width: 10px;
+            height: 10px;
+            background: var(--color-alpine);
+        }
+    }
+}
+.slide-brend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    &.img img{
+        object-fit: contain;
+    }
+    @media(any-hover: hover){
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.controls-brends {
+    .swiper-button-disabled {
+        opacity: 0.5;
+    }
+    // .controls-brends__button-prev
+    // .controls-brends__button-next
+    &__button-prev,
+    &__button-next {
+        width: 33px;
+        height: 58px;
+    }
+    // .controls-brends__button-prev
+    &__button-prev{
+        margin: 0px 40px 0px 0px;
+    }
+    // .controls-brends__button-next
+    &__button-next {
+        margin: 0px 0px 0px 10px;
+    }
+}

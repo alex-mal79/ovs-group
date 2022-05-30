@@ -1,31 +1,50 @@
 {
     "Меню": {
         "prefix": "s-menu",
-        "body": ["<div class=\"header__menu menu\">",
-                        "\t<button type=\"button\" class=\"menu__icon icon-menu btn-reset\" data-icon-menu>",
-                            "\t\t<span></span>",
-                            "\t\t<span></span>",
-                            "\t\t<span></span>",
-                        "\t</button>",
-                        "\t<nav class=\"menu__body\" data-menu-body>",
-                            "\t\t<ul class=\"menu__list\">",
-                                "\t\t\t<li class=\"menu__item\">",
-                                    "\t\t\t\t<a href=\"\" class=\"menu__link\"></a>",
-                                "\t\t\t</li>",
-                            "\t\t</ul>",
-                        "\t</nav>",
-                    "</div>"],
+        "body": [
+            "<div class=\"header__menu menu\">",
+            "\t<button type=\"button\" class=\"menu__icon icon-menu btn-reset\" data-icon-menu>",
+            "\t\t<span></span>",
+            "\t\t<span></span>",
+            "\t\t<span></span>",
+            "\t</button>",
+            "\t<nav class=\"menu__body\" data-menu-body>",
+            "\t\t<ul class=\"menu__list\">",
+            "\t\t\t<li class=\"menu__item\">",
+            "\t\t\t\t<a href=\"\" class=\"menu__link\"></a>",
+            "\t\t\t</li>",
+            "\t\t</ul>",
+            "\t</nav>",
+            "</div>"
+        ],
         "description": "Меню"
     },
     "Изображения": {
         "prefix": "s-picture",
         "body": [
-          "<picture>",
-          "  <source srcset=\"$1.avif\" type=\"image/avif\">",
-          "  <source srcset=\"$1.webp\" type=\"image/webp\">",
-          "  <img loading=\"lazy\" src=\"$1.$2\" alt=\"$3\">",
-          "</picture>"
+            "<picture>",
+            "\t<source srcset=\"$1.avif\" type=\"image/avif\">",
+            "\t<source srcset=\"$1.webp\" type=\"image/webp\">",
+            "\t<img loading=\"lazy\" src=\"$1.$2\" alt=\"$3\">",
+            "</picture>"
         ],
         "description": "Snippet for basic image structure"
-      }
+    },
+    "Slider Swiper": {
+        "prefix": "s-swiper",
+        "body": ["<div class=\"$1__swiper swiper\">",
+                    "\t<div class=\"swiper-wrapper\">",
+                    "\t\t<!-- слайд -->",
+                    "\t\t<div class=\"swiper-slide\">",
+                    "\t\t\t<div class=\"slide-$2\">",
+                    "\t\t\t\t$3",
+                    "\t\t\t</div>",
+                    "\t\t</div>",
+                    "\t\t<!-- конец слайд -->",
+                    "\t\t<!-- на удаление -->",
+                    "\t\t<!-- конец удаление -->",
+                    "\t</div>",
+                    "</div>"],
+        "description": "Слайдер Swiper"
+    }
 }
