@@ -42,20 +42,35 @@ if(fullSlider){
     });
 }
 // Слайдер "Производители"
-const brends = document.querySelector('.brend-index__swiper');
+const brends = document.querySelector('.brends-index__swiper');
 if(brends){
     const brend = new Swiper(brends,{
         observer: true,
         observerParents: true,
         observerSlideChildren: true,
         slidesPerView: 5,
-        spaceBetween: 20,
+        spaceBetween: 0,
         navigation: {
             prevEl: '.controls-brends__button-prev',
             nextEl: '.controls-brends__button-next',
         },
         pagination: {
             el: '.brends-index__pagination',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            680: {
+                slidesPerView: 3,
+            },
+            920: {
+                slidesPerView: 4,
+            },
         },
     });
 }
