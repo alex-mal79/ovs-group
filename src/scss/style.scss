@@ -16,7 +16,10 @@ Version: 1.0
 @import "./parts/footer";
 
 // подключения страниц
+// Главная
 @import "./pages/index/fullscreen";
-@import "./pages/index/abuot";
+@import "./pages/index/about";
 @import "./pages/index/services";
 @import "./pages/index/brends";
+// О компании
+@import "./pages/about/about";

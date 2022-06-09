@@ -1,0 +1,55 @@
+.about {
+    // .about__container
+    &__container {
+        @include adaptive-value("padding-top", 150, 100, 1);
+        @include adaptive-value("padding-bottom", 60, 40, 1);
+        @media (min-width: $md1) {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 50%;
+                right: -70px;
+                height: 377px;
+                width: 50px;
+                background: url(../img/bg-dots.png) no-repeat;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    // .about__title
+    &__title {
+        text-align: center;
+    }
+    // .about__content
+    &__content {
+        @include adaptive-value("padding-top", 50, 25, 1);
+        p{
+            @include adaptive-font(16, 14);
+            line-height: 130%;
+            &:not(:last-child){
+                @include adaptive-value("margin-bottom", 20, 10, 1);
+            }
+        }
+    }
+    // .about__list
+    &__list {
+        @include adaptive-value("margin-bottom", 20, 10, 1);
+        @include adaptive-value("margin-left", 30, 5, 1);
+    }
+    // .about__item
+    &__item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child){
+            @include adaptive-value("margin-bottom", 10, 5, 1);
+        }
+    }
+    // .about__list-img
+    &__list-img {
+        flex: 0 0 10px;
+        width: 10px;
+        height: 5px;
+        margin: 0px 10px 0px 0px;
+    }
+}
