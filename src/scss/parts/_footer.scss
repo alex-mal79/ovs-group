@@ -374,7 +374,6 @@
     &__year,
     &__guard {
         font-family: var(--font-montserrat);
-        font-size: 14px;
         @include adaptive-font(14, 12);
         white-space: nowrap;
     }
@@ -388,5 +387,6 @@
     // .copy-footer__guard
     &__guard {
         color: var(--color-iron);
+        @include adaptive-font(12, 10);
     }
 }

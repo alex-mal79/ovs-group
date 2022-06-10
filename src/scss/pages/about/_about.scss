@@ -2,12 +2,11 @@
     // .about__container
     &__container {
         @include adaptive-value("padding-top", 150, 100, 1);
-        @include adaptive-value("padding-bottom", 60, 40, 1);
         @media (min-width: $md1) {
             position: relative;
             &::after {
                 position: absolute;
-                content: '';
+                content: "";
                 top: 50%;
                 right: -70px;
                 height: 377px;
@@ -24,10 +23,11 @@
     // .about__content
     &__content {
         @include adaptive-value("padding-top", 50, 25, 1);
-        p{
+        @include adaptive-value("padding-bottom", 50, 25, 1);
+        p {
             @include adaptive-font(16, 14);
             line-height: 130%;
-            &:not(:last-child){
+            &:not(:last-child) {
                 @include adaptive-value("margin-bottom", 20, 10, 1);
             }
         }
@@ -41,7 +41,7 @@
     &__item {
         display: flex;
         align-items: center;
-        &:not(:last-child){
+        &:not(:last-child) {
             @include adaptive-value("margin-bottom", 10, 5, 1);
         }
     }
@@ -52,4 +52,7 @@
         height: 5px;
         margin: 0px 10px 0px 0px;
     }
+    // .about__documents
+    // &__documents {
+    // }
 }
