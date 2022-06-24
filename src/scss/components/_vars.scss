@@ -1,6 +1,6 @@
 // Размеры контейнера
 $maxWidth: 1366px; //Размер макета
-$widthContainer: 1200px; //Размер блока контента
+$widthContainer: 1240px; //Размер блока контента
 $containerOffset: 10px; //Отступ безопасности
 $maxWidthContainer: calc(
     $widthContainer + $containerOffset * 2

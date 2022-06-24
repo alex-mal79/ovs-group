@@ -1,0 +1,15 @@
+.maps {
+    // .maps__container
+    &__container {
+        @include adaptive-value("margin-bottom", 50, 25, 1);
+    }
+    // .maps__title
+    &__title {
+        text-align: center;
+    }
+    // .maps__maps
+    &__maps {
+        max-width: 100%;
+        @include adaptive-value("height", 400, 250 , 1);
+    }
+}

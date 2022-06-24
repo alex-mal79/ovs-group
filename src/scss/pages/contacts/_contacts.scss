@@ -1,0 +1,296 @@
+.contacts {
+    // .contacts__container
+    &__container {
+        @include adaptive-value("padding-top", 150, 100, 1);
+        @include adaptive-value("padding-bottom", 50, 25, 1);
+        @media (min-width: $md1) {
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                right: -70px;
+                height: 377px;
+                width: 50px;
+                background: url(../img/bg-dots.png) no-repeat;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    // .contacts__title
+    &__title {
+        text-align: center;
+        @include adaptive-value("margin-bottom", 50, 25, 1);
+    }
+    // .contacts__address
+    &__address {
+        & .address__link{
+            color: var(--color-black);
+            @media(any-hover: hover){
+                &:hover{
+                    color: var(--color-alpine);
+                }
+            }
+        }
+    }
+}
+.address-contacts {
+    display: flex;
+    // .address-contacts__props
+    &__props {
+        flex: 0 1 calc(33.333% - 20px);
+        margin: 0px 30px 0px 0px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--color-gallery);
+    }
+    // .address-contacts__communication
+    &__communication {
+        flex: 0 1 calc(33.333% - 20px);
+        margin: 0px 30px 0px 0px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--color-gallery);
+    }
+    // .address-contacts__work-schedule
+    &__work-schedule {
+        flex: 0 1 calc(33.333% - 20px);
+        padding: 10px;
+        border-radius: 10px;
+        background-color: var(--color-gallery);
+    }
+}
+.props {
+    display: flex;
+    flex-direction: column;
+    // .props__title
+    &__title {
+        margin: 0px 0px 15px 0px;
+        text-align: center;
+        @include adaptive-font(18, 16);
+        font-weight: 500;
+    }
+    // .props__wrap
+    &__wrap {
+        flex: 1 1 auto;
+        display: flex;
+    }
+    // .props__icon
+    &__icon {
+        flex: 0 0 25px;
+        height: 25px;
+        object-fit: contain;
+        margin: 0px 10px 0px 0px;
+    }
+    // .props__content
+    &__content {
+        flex: 0 1 auto;
+    }
+    // .props__list
+    // &__list {
+    // }
+    // .props__item
+    &__item {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &:not(:last-child){
+            margin: 0px 0px 5px 0px;
+        }
+    }
+    // .props__abbr
+    &__abbr {
+        margin: 0px 10px 5px 0px;
+        @include adaptive-font(14, 12);
+        font-weight: 500;
+    }
+    // .props__abbr--font-size
+    &__abbr--font-size {
+        margin: 0px 0px 0px 0px;
+        @include adaptive-font(16, 14);
+    }
+    // .props__abbr--full
+    &__abbr--full {
+        flex: 0 1 100%
+    }
+    // .props__descr
+    &__descr {
+        margin: 0px 0px 5px 0px;
+        @include adaptive-font(16, 14);
+    }
+}
+.communication {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    // .communication__title
+    &__title {
+        margin: 0px 0px 15px 0px;
+        text-align: center;
+        @include adaptive-font(18, 16);
+        font-weight: 500;
+    }
+    // .communication__wrap
+    &__wrap {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    // .communication__block
+    &__block {
+        display: flex;
+        width: 100%;
+        &:not(:last-child){
+            margin: 0px 0px 15px 0px;
+        }
+    }
+    // .communication__icon
+    &__icon {
+        flex: 0 0 20px;
+        height: 20px;
+        margin: 0px 10px 0px 0px;
+        img{
+            object-fit: contain;
+        }
+    }
+    // .communication__inner
+    &__inner {
+        flex: 0 1 auto;
+    }
+    // .communication__sub-title
+    &__sub-title {
+        margin: 0px 0px 5px 0px;
+        line-height: 130%;
+        @include adaptive-font(16, 14);
+        font-weight: 500;
+    }
+    // .communication__list
+    &__list {
+        margin: 0px 0px 0px 10px;
+    }
+    // .communication__item
+    &__item {
+        &:not(:last-child){
+            margin: 0px 0px 5px 0px;
+        }
+    }
+    // .communication__link
+    &__link {
+        position: relative;
+        @include adaptive-font(14, 12);
+        font-weight: 500;
+        line-height: 125%;
+        color: var(--color-mine);
+        white-space: nowrap;
+        transition: color 0.3s ease 0s;
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -1px;
+            z-index: 5;
+        }
+        &::before {
+            width: 100%;
+            height: 1px;
+            background-color: var(--color-slate);
+        }
+        &::after {
+            width: 0;
+            height: 1px;
+            background-color: var(--color-alpine);
+            transition: width 0.3s ease 0s;
+        }
+        @media(any-hover: hover){
+            &:hover{
+                color: var(--color-alpine);
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+.work-schedule {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    // .work-schedule__title
+    &__title {
+        margin: 0px 0px 15px 0px;
+        text-align: center;
+        @include adaptive-font(18, 16);
+        font-weight: 500;
+    }
+    // .work-schedule__wrap
+    &__wrap {
+        flex: 1 1 auto;
+        display: flex;
+    }
+    // .work-schedule__icon
+    &__icon {
+        flex: 0 0 25px;
+        height: 25px;
+        margin: 0px 10px 0px 0px;
+        img{
+            object-fit: contain;
+        }
+    }
+    // .work-schedule__icon-schedule
+    &__icon-schedule {
+        width: 15px;
+        height: 15px;
+    }
+    // .work-schedule__list
+    &__list {
+        flex: 0 1 auto;
+        margin: 0px 0px 15px 0px;
+    }
+    // .work-schedule__item
+    &__item {
+        display: flex;
+        align-items: center;
+        &:not(:last-child){
+            margin: 0px 0px 5px 0px;
+        }
+    }
+    // .work-schedule__icon-schedule
+    &__icon-schedule {
+        margin: 0px 10px 0px 0px;
+    }
+    // .work-schedule__text
+    &__text {
+        display: flex;
+        align-items: flex-end;
+    }
+    // .work-schedule__abbr
+    &__abbr {
+        display: inline-block;
+        width: 20px;
+        margin: 0px 5px 0px 0px;
+        @include adaptive-font(12, 10);
+        font-weight: 500;
+    }
+    // .work-schedule__descr
+    &__descr {
+        @include adaptive-font(14, 12);
+    }
+    // .work-schedule__notice
+    &__notice {
+        flex: 0 1 auto;
+        display: flex;
+    }
+    // .work-schedule__icon-notice
+    &__icon-notice {
+        flex: 0 0 25px;
+        height: 25px;
+        margin: 0px 10px 0px 0px;
+    }
+    // .work-schedule__notice-text
+    &__notice-text {
+        flex: 0 1 auto;
+        @include adaptive-font(14, 12);
+        font-weight: 500;
+    }
+}
