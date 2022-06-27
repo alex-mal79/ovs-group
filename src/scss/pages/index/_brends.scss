@@ -63,9 +63,6 @@
     align-items: center;
     width: 170px;
     height: 170px;
-    &.img img{
-        object-fit: contain;
-    }
     @media(any-hover: hover){
         &:hover{
             cursor: pointer;

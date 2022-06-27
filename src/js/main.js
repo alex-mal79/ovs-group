@@ -22,7 +22,7 @@ if(fullSlider){
             swiper:{
                 el: '.thumbs-fullscreen__swiper',
                 slidesPerView: 1,
-                spaceBetween: 10,
+                spaceBetween: 20,
                 freeMode: true,
                 watchSlidesProgress: true,
                 breakpoints: {
@@ -30,10 +30,10 @@ if(fullSlider){
                         slidesPerView: 1,
                         slidesPerGroup: 1,
                     },
-                    600: {
+                    768: {
                         slidesPerView: 2,
                     },
-                    840: {
+                    992: {
                         slidesPerView: 3,
                     },
                 },

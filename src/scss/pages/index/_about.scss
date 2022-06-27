@@ -1,6 +1,6 @@
 .about-index {
-    @include adaptive-value('padding-top', 100, 50, 1);
-    @include adaptive-value('padding-bottom', 100, 50, 1);
+    @include adaptive-value('padding-top', 50, 25, 1);
+    @include adaptive-value('padding-bottom', 50, 25, 1);
     background-color: var(--color-white);
     // .about-index__container
     &__container {
@@ -20,7 +20,7 @@
     }
     // .about-index__title
     &__title {
-        @include adaptive-value('margin-bottom', 50, 25, 1);
+        @include adaptive-value('margin-bottom', 25, 15, 1);
         text-align: center;
     }
     // .about-index__wrap
@@ -29,15 +29,17 @@
     }
     // .about-index__content
     &__content {
-        flex: 0 1 66.667%;
+        flex: 0 1 var(--coll75);
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 20px;
         @media (max-width: $md2) {
-            flex: 0 1 75%;
+            flex: 0 1 var(--coll67-md2);
         }
         @media (max-width: $md3) {
             flex: 0 1 100%;
+            margin: 0px 0px 0px 0px;
         }
         .button-more {
             color: var(--color-white);
@@ -53,7 +55,6 @@
     // .about-index__text
     &__text {
         @include adaptive-value('margin-bottom', 70, 35, 1);
-        padding: 0px 30px 0px 0px;
         @media (max-width: $md3) {
             padding: 0px 0px 0px 0px;
         }
@@ -70,9 +71,9 @@
     // }
     // .about-index__media
     &__media {
-        flex: 0 1 33.333%;
+        flex: 0 1 var(--coll25);
         @media (max-width: $md2) {
-            flex: 0 1 25%;
+            flex: 0 1 var(--coll33-md2);
         }
         @media (max-width: $md3) {
             display: none;
@@ -81,6 +82,6 @@
     // .about-index__img
     &__img {
         width: 100%;
-        padding: 0px 0px 75% 0px;
+        height: 100%;
     }
 }

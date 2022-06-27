@@ -18,9 +18,22 @@ $md4: 480px;
     --max-widthContainer: #{$maxWidthContainer};
     --container-offset: #{$containerOffset};
 
+    // Колонки
+    --coll25: 23.79%;
+    --coll33: 32.26%;
+    --coll33-md2: 31.89%;
+    --coll50: 49.19%;
+    --coll50-md2: 47.84%;
+    --coll67: 66.13%;
+    --coll67-md2: 65.95%;
+    --coll75: 74.6%;
+    --coll-menu: 40.73%;
+    --coll-menu-md2: 54.59%;
+    --coll12-md2: 9.19%;
+
     //Шрифты
-    --font-roboto: 'Roboto', sans-serif;
-    --font-montserrat: 'Montserrat';
+    --font-roboto: "Roboto", sans-serif;
+    --font-montserrat: "Montserrat";
 
     // Цветовая схема
     --color-black: #000;

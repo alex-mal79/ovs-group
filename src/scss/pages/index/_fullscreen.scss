@@ -37,10 +37,11 @@
     }
     // .fullscreen__thumbs
     &__thumbs {
-        flex: 0 1 66.667%;
+        flex: 0 1 var(--coll75);
         min-width: 0;
+        margin-right: 20px;
         @media (max-width: $md2) {
-            flex: 0 1 80%;
+            flex: 0 1 var(--coll67-md2);
         }
         @media (max-width: $md4) {
             display: none;
@@ -49,13 +50,13 @@
     // .fullscreen__controls
     &__controls {
         position: relative;
-        flex: 0 1 33.333%;
+        flex: 0 1 var(--coll25);
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         z-index: 5;
         @media (max-width: $md2) {
-            flex: 0 1 20%;
+            flex: 0 1 var(--coll33-md2);
         }
         @media (max-width: $md4) {
             flex: 0 1 100%;
@@ -100,8 +101,8 @@
 .slide-fullscreen {
     display: flex;
     flex-direction: column;
-    @media(any-hover: hover){
-        &:hover{
+    @media (any-hover: hover) {
+        &:hover {
             cursor: pointer;
         }
     }
@@ -117,7 +118,7 @@
     }
     // .slide-fullscreen__content
     &__content {
-        @media(max-width: $md3){
+        @media (max-width: $md3) {
             flex: 1 1 auto;
         }
     }
@@ -137,7 +138,12 @@
     // &__button {
     // }
 }
+
 .thumbs-fullscreen {
+    .swiper-slide {
+        height: auto;
+        min-height: 100%;
+    }
     .swiper-slide-thumb-active {
         .thumbs-fullscreen__slide {
             p {
@@ -153,11 +159,10 @@
     // }
     // .thumbs-fullscreen__slide
     &__slide {
-        padding: 0px 10px 0px 0px;
+        display: flex;
+        min-height: 100%;
         p {
             position: relative;
-            display: inline-block;
-            @include adaptive-value("max-width", 235, 200, 1);
             padding: 0px 0px 10px 0px;
             font-weight: 400;
             @include adaptive-font(20, 18);

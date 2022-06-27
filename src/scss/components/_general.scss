@@ -16,6 +16,10 @@
     // .controls-fullscreen__buttons
     &__buttons {
         display: flex;
+        @media(max-width: $md4){
+            width: 100%;
+            justify-content: space-between;
+        }
         .swiper-button-disabled {
             opacity: 0.5;
         }
@@ -57,13 +61,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    @include adaptive-value('width', 200, 160, 1);
-    @include adaptive-value('height', 60, 50, 1);
+    @include adaptive-value('width', 150, 120, 1);
+    @include adaptive-value('height', 50, 40, 1);
     border: 1px solid var(--color-alpine);
     border-radius: 5px;
     font-family: var(--font-montserrat);
     font-weight: 500;
-    @include adaptive-font(20, 16);
+    @include adaptive-font(16, 14);
     color: var(--color-alpine);
     text-transform: uppercase;
     background-color: transparent;
