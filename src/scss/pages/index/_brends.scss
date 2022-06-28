@@ -1,6 +1,6 @@
 .brends-index {
-    @include adaptive-value('padding-top', 100, 50, 1);
-    @include adaptive-value('padding-bottom', 100, 50, 1);
+    @include adaptive-value('padding-top', 50, 25, 1);
+    @include adaptive-value('padding-bottom', 50, 25, 1);
     background-color: var(--color-white);
     // .brends-index__container
     &__container {
@@ -30,7 +30,12 @@
     }
     // .brends-index__swiper
     &__swiper {
+        flex: 0 1 var(--coll10);
         min-width: 0;
+        margin-right: 20px;
+        @media(max-width: $md3){
+            margin-right: auto;
+        }
         & .swiper-slide{
             display: flex;
             justify-content: center;
@@ -39,10 +44,23 @@
     }
     // .brends-index__controls
     &__controls {
+        flex: 0 0 var(--coll12);
+        display: flex;
         @media(max-width: $md3){
             display: none;
         }
     }
+    // .brends-index__controls--left
+    &__controls--left {
+        justify-content: flex-start;
+        margin-right: 20px;
+    }
+    // .brends-index__controls--right
+    &__controls--right {
+        justify-content: flex-end;
+    }
+}
+    .brends-index {
     // .brends-index__pagination-wrap
     &__pagination-wrap {
         margin: 30px 0px 0px 0px;
@@ -61,8 +79,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
-    height: 170px;
+    width: 190px;
+    height: 190px;
     @media(any-hover: hover){
         &:hover{
             cursor: pointer;

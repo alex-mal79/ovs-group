@@ -49,7 +49,7 @@ if(brends){
         observerParents: true,
         observerSlideChildren: true,
         slidesPerView: 5,
-        spaceBetween: 0,
+        spaceBetween: 20,
         navigation: {
             prevEl: '.controls-brends__button-prev',
             nextEl: '.controls-brends__button-next',
@@ -63,13 +63,15 @@ if(brends){
             },
             480: {
                 slidesPerView: 2,
-                spaceBetween: 20,
             },
             680: {
                 slidesPerView: 3,
             },
-            920: {
+            992: {
                 slidesPerView: 4,
+            },
+            1024: {
+                slidesPerView: 5,
             },
         },
     });

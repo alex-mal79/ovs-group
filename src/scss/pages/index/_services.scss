@@ -67,14 +67,14 @@
     // .cart-services__image
     &__image {
         width: 100%;
-        padding: 10px 10px;
+        padding: 10px;
+        margin: 0px 0px 10px 0px;
     }
     // .cart-services__img
     &__img {
+        height: 190px;
         border-radius: 5px;
         overflow: hidden;
-        padding: 0px 0px 66% 0px;
-        margin: 0px 0px 20px 0px;
     }
     // .cart-services__icons
     &__icons {
