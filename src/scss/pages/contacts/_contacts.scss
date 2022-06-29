@@ -1,7 +1,7 @@
 .contacts {
     // .contacts__container
     &__container {
-        @include adaptive-value("padding-top", 150, 100, 1);
+        @include adaptive-value("padding-top", 140, 75, 1);
         @include adaptive-value("padding-bottom", 50, 25, 1);
         @media (min-width: $md1) {
             position: relative;
@@ -20,7 +20,7 @@
     // .contacts__title
     &__title {
         text-align: center;
-        @include adaptive-value("margin-bottom", 50, 25, 1);
+        @include adaptive-value("margin-bottom", 25, 15, 1);
     }
     // .contacts__address
     &__address {
@@ -36,28 +36,60 @@
 }
 .address-contacts {
     display: flex;
+    @media(max-width: $md3){
+        flex-wrap: wrap;
+    }
     // .address-contacts__props
     &__props {
-        flex: 0 1 calc(33.333% - 20px);
-        margin: 0px 30px 0px 0px;
+        flex: 0 1 var(--coll50);
+        margin-right: 20px;
         padding: 10px;
         border-radius: 10px;
         background-color: var(--color-gallery);
+        @media(max-width: $md2){
+            flex: 0 1 var(--coll43-md2);
+        }
+        @media(max-width: $md3){
+            flex: 0 1 100%;
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
     }
     // .address-contacts__communication
     &__communication {
-        flex: 0 1 calc(33.333% - 20px);
-        margin: 0px 30px 0px 0px;
+        flex: 0 1 var(--coll33);
+        margin-right: 20px;
         padding: 10px;
         border-radius: 10px;
         background-color: var(--color-gallery);
+        @media(max-width: $md2){
+            flex: 0 1 var(--coll33-md2);
+        }
+        @media(max-width: $md3){
+            flex: 1 1 auto;
+        }
+        @media(max-width: $md4){
+            flex: 0 1 100%;
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
     }
     // .address-contacts__work-schedule
     &__work-schedule {
-        flex: 0 1 calc(33.333% - 20px);
+        flex: 0 1 var(--coll15);
+        min-width: 190px;
         padding: 10px;
         border-radius: 10px;
         background-color: var(--color-gallery);
+        @media(max-width: $md2){
+            flex: 0 1 var(--coll15-md2);
+        }
+        @media(max-width: $md3){
+            flex: 0 1 var(--coll15-md3);
+        }
+        @media(max-width: $md4){
+            flex: 0 1 100%;
+        }
     }
 }
 .props {
@@ -268,11 +300,13 @@
     // .work-schedule__descr
     &__descr {
         @include adaptive-font(14, 12);
+        // white-space: nowrap;
     }
     // .work-schedule__notice
     &__notice {
-        flex: 0 1 auto;
+        flex: 0 0 auto;
         display: flex;
+        align-items: center;
     }
     // .work-schedule__icon-notice
     &__icon-notice {

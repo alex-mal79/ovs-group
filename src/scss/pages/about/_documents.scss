@@ -1,6 +1,6 @@
 .about-documents {
-    @include adaptive-value('padding-top', 100, 50, 1);
-    @include adaptive-value('padding-bottom', 100, 50, 1);
+    @include adaptive-value('padding-top', 50, 25, 1);
+    @include adaptive-value('padding-bottom', 50, 25, 1);
     background-color: var(--color-gallery);
     // .about-documents__container
     &__container {
@@ -23,19 +23,27 @@
     // .documents__title
     &__title {
         text-align: center;
+        @include adaptive-value("margin-bottom", 25, 15, 1);
     }
     // .documents__list
     &__list {
         display: flex;
-        justify-content: space-around;
         @media (max-width: $md3) {
             flex-wrap: wrap;
         }
-        @include adaptive-value("margin-top", 50, 25, 1);
     }
+    // .documents__item--first
+		&__item--first {
+            @media(max-width: $md2){
+                display: none;
+            }
+		}
     // .documents__item
     &__item {
-        max-width: 200px;
+        flex: 0 1 var(--coll33);
+        &:not(:last-child){
+            margin-right: 20px;
+        }
         @media(any-hover: hover){
             &:hover{
                 cursor: pointer;
@@ -44,24 +52,30 @@
                 }
             }
         }
-        @media (min-width: $md3) {
-            &:not(:last-child) {
-                @include adaptive-value("margin-right", 10, 5, 1);
-            }
+        @media(max-width: $md2){
+            flex: 0 1 var(--coll50-md2);
         }
         @media (max-width: $md3) {
             &:not(:last-child) {
                 margin-bottom: 20px;
             }
         }
+        @media(max-width: $md4){
+            flex: 0 1 100%;
+            text-align: center;
+            &:not(:last-child){
+                margin-right: 0px;
+            }
+        }
     }
     // .documents__img
     &__img {
-        width: 200px;
-        height: 285px;
+        width: 210px;
+        height: 300px;
     }
     // .documents__descr
     &__descr {
+        max-width: 210px;
         margin: 10px 0px 0px 0px;
         @include adaptive-font(16, 14);
         font-weight: 500;

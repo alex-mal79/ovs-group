@@ -127,9 +127,7 @@
     // .address__inner
     &__inner {
         display: flex;
-        @media (max-width: $md4) {
-            flex-wrap: wrap;
-        }
+        flex-wrap: wrap;
     }
     // .address__link
     &__link {
@@ -157,7 +155,17 @@
                 height: 100%;
                 background-color: var(--color-slate);
             }
-            @media (max-width: $md4) {
+            @media (max-width: 1115px) {
+                &::after {
+                    display: none;
+                }
+            }
+            @media(max-width: $md2){
+                &::after {
+                    display: block;
+                }
+            }
+            @media (max-width: 370px) {
                 &::after {
                     display: none;
                 }

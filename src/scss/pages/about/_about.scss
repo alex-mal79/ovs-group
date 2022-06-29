@@ -1,7 +1,7 @@
 .about {
     // .about__container
     &__container {
-        @include adaptive-value("padding-top", 150, 100, 1);
+        @include adaptive-value("padding-top", 140, 75, 1);
         @media (min-width: $md1) {
             position: relative;
             &::after {
@@ -22,19 +22,19 @@
     }
     // .about__content
     &__content {
-        @include adaptive-value("padding-top", 50, 25, 1);
-        @include adaptive-value("padding-bottom", 50, 25, 1);
+        @include adaptive-value("padding-top", 25, 15, 1);
+        @include adaptive-value("padding-bottom", 25, 15, 1);
         p {
             @include adaptive-font(16, 14);
-            line-height: 130%;
+            line-height: 125%;
             &:not(:last-child) {
-                @include adaptive-value("margin-bottom", 20, 10, 1);
+                @include adaptive-value("margin-bottom", 10, 5, 1);
             }
         }
     }
     // .about__list
     &__list {
-        @include adaptive-value("margin-bottom", 20, 10, 1);
+        @include adaptive-value("margin-bottom", 15, 10, 1);
         @include adaptive-value("margin-left", 30, 5, 1);
     }
     // .about__item
@@ -42,7 +42,7 @@
         display: flex;
         align-items: center;
         &:not(:last-child) {
-            @include adaptive-value("margin-bottom", 10, 5, 1);
+            @include adaptive-value("margin-bottom", 5, 2, 1);
         }
     }
     // .about__list-img
