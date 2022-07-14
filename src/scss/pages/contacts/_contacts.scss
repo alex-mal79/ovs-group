@@ -20,7 +20,6 @@
     // .contacts__title
     &__title {
         text-align: center;
-        @include adaptive-value("margin-bottom", 25, 15, 1);
     }
     // .contacts__address
     &__address {
@@ -306,7 +305,7 @@
     &__notice {
         flex: 0 0 auto;
         display: flex;
-        align-items: center;
+        align-items: centerтз;
     }
     // .work-schedule__icon-notice
     &__icon-notice {

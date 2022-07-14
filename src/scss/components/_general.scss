@@ -4,6 +4,7 @@
     @include adaptive-font(32, 22);
     line-height: 125%;
     color: var(--color-ebony);
+    @include adaptive-value("margin-bottom", 25, 15, 1);
 }
 .title-footer {
     font-family: var(--font-montserrat);

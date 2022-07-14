@@ -20,7 +20,6 @@
     }
     // .brends-index__title
     &__title {
-        @include adaptive-value('margin-bottom', 50, 25, 1);
         text-align: center;
     }
     // .brends-index__wrap

@@ -23,7 +23,6 @@
     // .documents__title
     &__title {
         text-align: center;
-        @include adaptive-value("margin-bottom", 25, 15, 1);
     }
     // .documents__list
     &__list {

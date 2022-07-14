@@ -76,3 +76,26 @@ if(brends){
         },
     });
 }
+//================================================================
+//Карта
+//================================================================
+const mapBlock = document.getElementById('map');
+if(mapBlock){
+    ymaps.ready(function (){
+        let map = new ymaps.Map('map', {
+            center: mapBlock.dataset.gps.split(','),
+            zoom: mapBlock.dataset.zoom.split(',')
+        });
+        let placemark = new ymaps.Placemark(mapBlock.dataset.placemark.split(','), {
+            balloonContentHeader: mapBlock.dataset.balloonHeader,
+            balloonContentBody: mapBlock.dataset.balloonBody
+        }, {
+            iconLayout: 'default#image',
+            iconImageHref: 'img/icons/marker.png',
+            iconImageSize: [30, 30],
+            iconImageOffset: [-10, -20]
+        });
+        map.geoObjects.add(placemark);
+        map.behaviors.disable(['scrollZoom']);
+    });
+}

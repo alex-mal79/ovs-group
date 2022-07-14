@@ -20,7 +20,6 @@
     }
     // .services-index__title
     &__title {
-        @include adaptive-value('margin-bottom', 25, 15, 1);
         text-align: center;
     }
     // .services-index__list

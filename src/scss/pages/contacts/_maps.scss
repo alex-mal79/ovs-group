@@ -1,14 +1,14 @@
-.maps {
-    // .maps__container
+.map {
+    // .map__container
     &__container {
         @include adaptive-value("margin-bottom", 50, 25, 1);
     }
-    // .maps__title
+    // .map__title
     &__title {
         text-align: center;
     }
-    // .maps__maps
-    &__maps {
+    // .map__map
+    &__map {
         max-width: 100%;
         @include adaptive-value("height", 400, 250 , 1);
     }

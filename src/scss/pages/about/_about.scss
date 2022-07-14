@@ -22,7 +22,6 @@
     }
     // .about__content
     &__content {
-        @include adaptive-value("padding-top", 25, 15, 1);
         @include adaptive-value("padding-bottom", 25, 15, 1);
         p {
             @include adaptive-font(16, 14);
