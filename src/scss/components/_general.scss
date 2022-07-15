@@ -47,9 +47,9 @@
     // .controls-fullscreen__icon-next
     &__icon-prev,
     &__icon-next {
+        display: block;
         width: 25px;
         height: 12px;
-        fill: var(--color-alpine);
     }
     // .controls-fullscreen__icon-prev
     // &__icon-prev {
